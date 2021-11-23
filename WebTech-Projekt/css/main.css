@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+/* font-family: 'Quicksand', sans-serif; */
+
+:root{
+    --maincolor: #b3e59f;
+    --secondarycolor: #98ce83;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+nav{
+    padding: 10px 30px;
+    background-color: white;
+ 
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    padding:10px 0; 
+
+}
+nav ul li.navitems{
+    width: auto;
+    margin: 0 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+}
+nav ul li.logo{
+    flex: 1;
+    font-size: 1.8rem;
+}
+nav ul li a{
+    color: black;
+
+}
+nav ul li a span{
+    color: var(--maincolor);
+}
+nav ul li.navitems:after{
+    position: absolute;
+    opacity: 0;
+    background-color: var(--maincolor);
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    content: '';
+
+}
+
+nav ul li.navitems:hover:after{
+    opacity: 1;
+    bottom: 5px;
+    transition: all 0.1s linear;
+}
+
+.logo{
+    /* display: none; */
+    width: 2rem;
+}
+
+@media all and (max-width: 1000px){
+
+    nav ul li.navitems{
+        width: 100%;
+    }
+
+    nav ul li.navitems:after{
+
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 0px;
+        bottom: 0px;
+        content: '';
+    }
+
+}
