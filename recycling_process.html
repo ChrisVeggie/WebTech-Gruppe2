@@ -1,91 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-body {
-  font-family: Arial;
-}
+    <!-- Stylesheet imports -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Titel des "Tabs" -->
+    <title>Reycling Process</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-/* Style the header */
-.header {
-    border: solid 2px black;
-    background-color:rgb(159, 206, 159);
-    padding: 40px;
-    text-align:center;
-    font-size: 20px;
-}
+        body {}
 
-/* Create three equal columns that floats next to each other */
-.column {
-    display: table-cell;
-    border: solid 2px black;
-    padding: 10px;
-}
+        /* Style the header */
+        .header {
+            border: solid 2px black;
+            background-color: #b3e59f;
+            padding: 40px;
+            text-align: center;
+            font-size: 20px;
+        }
 
-.row{
-    display: table;
-    width: 100%;
-}
+        /* Create three equal columns that floats next to each other */
+        .column {
+            display: table-cell;
+            border: solid 2px black;
+            padding: 10px;
+        }
 
+        .row {
+            display: table;
+            width: 100%;
+        }
 
-/* Style the footer */
-.footer {
-    float:inline-end;
-    background-color:rgb(121, 160, 121);
-    border: solid 2px black;
-    text-align: center;
-}
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<h2>Key steps of recycling</h2>
-<p style="font-weight: bold;"><ins>Here you can learn how the recycling cycle generally takes place:</ins></p>
+    <!--Navigation-->
+    <nav>
+        <ul>
+            <li class="logo">
+                <a href="index.html">Recycle<span>4</span>Life</a>
+            </li>
+            <li class="navitems displaynone">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="navitems">
+                <a href="recycling_process.html"><span>Recycling</span> Process</a>
+            </li>
+            <li class="navitems">
+                <a href="why_you_should_care.html">Why <span>you </span>should <span>care</span></a>
+            </li>
+            <li class="navitems">
+                <a href="our_passion.html"><span>Our </span>Passion</a>
+            </li>
+        </ul>
+    </nav>
 
-<div class="header">
-  <h2>RECYCLING PROCESS</h2>
-</div>
+    <!--Page Logo + Text-->
 
-<div class="row">
-  <div class="column" style="background-color:rgb(241, 231, 231);"><span style="color:black; font-weight:bold; font-size:large;"> STEP 1:</span>The first Step is the <span style="font-weight:bold">COLLECTION:</span> 
-    Collection methods vary from municipality to municipality. After collection, recyclables must 
-    be sent to a materials recovery facility. Using a recycling facility, they are sorted and processed 
-    into marketable goods. They can then be sold to processing companies.
+    <section class="pagelogo">
+        <img class="pl1" src="images/renewable-energy.png" alt="" />
+        <h1 class="pl2"><span>Recycling</span> Process</h1>
+    </section>
+
+    <section class="maincontent">
+        <h2>Key steps of recycling</h2>
+        <br>
+        <p style="font-weight: bold">
+            <ins>Here you can learn how the recycling cycle generally takes place:</ins>
+        </p>
+
+    </section>
+
+
+
+    <div class="header">
+        <h2>RECYCLING PROCESS</h2>
     </div>
-    
-    <div class="column" style="background-color:lightgray;"><span style="color:black; font-weight:bold; font-size:large;"> STEP 2:</span>Here the recyclable materials are further <span style="font-weight:bold"> PROCESSED.</span>
-        After cleaning and sorting, the recyclables are processed  in order to extract the raw materials
-         that can then be used for the production of  of products with recycled content can be used.
+
+    <div class="row">
+        <div class="column" style="background-color: rgb(241, 231, 231)">
+            <span style="color: black; font-weight: bold; font-size: large">
+                STEP 1:</span>The first Step is the
+            <span style="font-weight: bold">COLLECTION:</span>
+            Collection methods vary from municipality to municipality. After
+            collection, recyclables must be sent to a materials recovery facility.
+            Using a recycling facility, they are sorted and processed into
+            marketable goods. They can then be sold to processing companies.
+        </div>
+
+        <div class="column" style="background-color: lightgray">
+            <span style="color: black; font-weight: bold; font-size: large">
+                STEP 2:</span>Here the recyclable materials are further
+            <span style="font-weight: bold"> PROCESSED.</span>
+            After cleaning and sorting, the recyclables are processed in order to
+            extract the raw materials that can then be used for the production of of
+            products with recycled content can be used.
+        </div>
+
+        <div class="column" style="background-color: rgb(177, 168, 168)">
+            <span style="color: black; font-weight: bold; font-size: large">
+                STEP 3:</span>The third third step
+            <span style="font-weight: bold"> COMPLETES </span> the recycling loop.
+            This step involves the purchase of recycled products. It should be added
+            that more and more of today's products are made with fully or partially
+            recycled material.
+        </div>
     </div>
-    
-    <div class="column" style="background-color:rgb(177, 168, 168);"><span style="color:black; font-weight:bold; font-size:large;"> STEP 3:</span>The third third step <span style="font-weight:bold"> COMPLETES </span> the recycling loop.
-     This step involves the purchase of recycled products. It should be added
-     that more and more of today's products are made with fully or partially recycled material.  
-         
-</div>
-</div>
 
-<div class="footer">
-  <p>Footer</p>
-</div>
-
+    <div class="footer">
+        <div class="footerwrapper">
+            <div class="footerpositive">
+                <p>Its never too late to do something positive</p>
+            </div>
+            <a href="index.html">
+                <div class="footerredirect">
+                    <div class="footerredirect1">
+                        <img src="images/care.png" alt="" />
+                    </div>
+                    <div class="footerredirect2">
+                        <strong>Insert Text HERE This link leads to another page</strong>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>
