@@ -176,13 +176,14 @@ nav ul li.navitems:hover:after {
     width: 100%;
   }
 }
+/*
 .triangle {
   width: 100%;
   height: 0;
   border-width: 96px 266px 0 0;
   border-color: #98ce83 transparent transparent transparent;
   border-style: solid;
-}
+} */
 
 /*Footer Navigation*/
 .footer {
@@ -191,7 +192,7 @@ nav ul li.navitems:hover:after {
   justify-content: center;
 }
 .footerwrapper {
-  width: 70%;
+  min-width: 70%;
 }
 .footerwrapper div {
   display: flex;
@@ -210,6 +211,7 @@ nav ul li.navitems:hover:after {
 
 .footerredirect {
   height: 350px;
+
   position: relative;
   margin: 0;
 }
@@ -219,21 +221,27 @@ nav ul li.navitems:hover:after {
   padding-right: 50px;
   font-size: 1.2em;
 }
-.footerredirect1 img {
+.footerredirect1 {
+  background-color: var(--secondarycolor);
   position: absolute;
+  top: -65px;
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+}
+.footerredirect1 img {
   width: 90px;
   height: 90px;
-  top: 45;
 }
 .footerredirect2 {
   background-color: var(--maincolor);
   height: 100%;
+  width: 100%;
 }
 .footerredirect2:hover {
-  background-color: var(--secondarycolor);
-  transition: all 0.3s linear;
-  border: #b3e59f;
-  text-shadow: 1px 1px 1px black;
+  transition: all 0.2s linear;
+  color: white;
 }
 
 .t360:hover {
@@ -281,4 +289,14 @@ nav ul li.navitems:hover:after {
   .footerwrapper {
     width: 100%;
   }
+}
+
+.parralaxourpassion {
+  background-image: url("images/Greenbackground.jpg");
+  height: 3000px;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
