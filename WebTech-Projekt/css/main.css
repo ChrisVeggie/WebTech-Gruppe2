@@ -1,94 +1,229 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
 /* font-family: 'Quicksand', sans-serif; */
-
-:root{
-    --maincolor: #b3e59f;
-    --secondarycolor: #98ce83;
+/*General Variable definition*/
+:root {
+  --maincolor: #b3e59f;
+  --secondarycolor: #98ce83;
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+/*General Document wide changes*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  font-size: xx-large;
 }
 
 body {
-    background-color: white;
+  background-color: white;
 }
 
-nav{
-    padding: 10px 30px;
-    background-color: white;
- 
+/*Navbar*/
+nav {
+  padding: 10px 30px;
+  background-color: white;
 }
-nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-nav ul li{
-    padding:10px 0; 
+nav li {
+  padding: 10px 0;
+}
+nav li.navitems {
+  width: auto;
+  margin: 0 20px;
+  text-align: center;
+  position: relative;
+}
+nav li.logo {
+  flex: 1;
+  width: 2rem;
+}
+nav a {
+  color: black;
+}
+nav span {
+  color: var(--maincolor);
+}
+/*Navbar Effects*/
+nav li.navitems:after {
+  position: absolute;
+  opacity: 0;
+  background-color: var(--maincolor);
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0px;
+  content: '';
+}
 
+nav ul li.navitems:hover:after {
+  opacity: 1;
+  bottom: 5px;
+  transition: all 0.1s linear;
 }
-nav ul li.navitems{
+
+/*Logo and Title for every Page*/
+
+.pagelogo {
+  height: 150px;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.pl1 {
+  height: 100px;
+  margin-right: 15px;
+}
+.pl2 {
+  font-size: xxx-large;
+}
+.pl2 span {
+  color: var(--maincolor);
+  font-size: xxx-large;
+}
+
+.pl2 {
+}
+
+/*Main sections*/
+.main {
+  margin: 150px 20% 150px;
+}
+
+.main p {
+  font-size: xx-large;
+  line-height: 1.3em;
+}
+.secondarywrapper {
+  background-color: var(--maincolor);
+  padding-left: 80px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.secondary2 {
+  flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+}
+
+.secondarItem1 {
+  background-color: var(--maincolor);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.secondaryItem2 {
+  background-color: var(--secondarycolor);
+  width: 500px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.secondaryimage img {
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footerwrapper {
+  width: 70%;
+}
+.footerwrapper div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.footerpositive {
+  height: 300px;
+  margin: 0;
+}
+.footerpositive p {
+}
+
+.footerredirect {
+  height: 350px;
+  position: relative;
+  margin: 0;
+}
+.footerredirect strong {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.footerredirect1 img {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 45;
+}
+.footerredirect2 {
+  background-color: var(--maincolor);
+  height: 100%;
+}
+.footerredirect2:hover {
+  background-color: var(--secondarycolor);
+  transition: all 0.3s linear;
+  border: #b3e59f;
+  text-shadow: 1px 1px 1px black;
+}
+
+.footerredirect img:hover {
+  transition: all 0.5s linear;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*Media Queries. Responsive Webdesign*/
+@media all and (max-width: 1100px) {
+  nav ul li.navitems {
+    width: 100%;
+  }
+
+  nav ul li.navitems:after {
+    position: absolute;
+    height: 70%;
+    width: 3px;
+
+    left: 8%;
+
+    content: '';
+  }
+  nav ul li.navitems:hover:after {
+    opacity: 1;
+    left: 10%;
+    transition: all 0.3s linear;
+    bottom: 0;
+  }
+  /*Add logo to the list of items in the mobile navigation*/
+  .logo {
     width: auto;
     margin: 0 20px;
     text-align: center;
-    font-size: 1.5rem;
     position: relative;
-}
-nav ul li.logo{
-    flex: 1;
-    font-size: 1.8rem;
-}
-nav ul li a{
-    color: black;
+  }
+  /*Remove Home li from mobile navigation*/
+  .displaynone {
+    display: none;
+  }
 
-}
-nav ul li a span{
-    color: var(--maincolor);
-}
-nav ul li.navitems:after{
-    position: absolute;
-    opacity: 0;
-    background-color: var(--maincolor);
-    height: 2px;
+  .footerwrapper {
     width: 100%;
-    left: 0;
-    bottom: 0px;
-    content: '';
-
-}
-
-nav ul li.navitems:hover:after{
-    opacity: 1;
-    bottom: 5px;
-    transition: all 0.1s linear;
-}
-
-.logo{
-    /* display: none; */
-    width: 2rem;
-}
-
-@media all and (max-width: 1000px){
-
-    nav ul li.navitems{
-        width: 100%;
-    }
-
-    nav ul li.navitems:after{
-
-        position: absolute;
-        height: 100%;
-        width: 2px;
-        left: 0px;
-        bottom: 0px;
-        content: '';
-    }
-
+  }
 }
