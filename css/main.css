@@ -56,7 +56,6 @@ nav li.navitems {
 }
 nav li.logo {
   flex: 1;
-  width: 2rem;
 }
 nav a {
   color: black;
@@ -289,14 +288,4 @@ nav ul li.navitems:hover:after {
   .footerwrapper {
     width: 100%;
   }
-}
-
-.parralaxourpassion {
-  background-image: url("images/Greenbackground.jpg");
-  height: 3000px;
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
