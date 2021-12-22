@@ -4,6 +4,7 @@
 :root {
   --maincolor: #b3e59f;
   --secondarycolor: #98ce83;
+  --mainlighter: #bae2aa;
 }
 /*General Document wide changes*/
 * {
@@ -16,16 +17,15 @@
   font-size: xx-large;
 }
 
-@media all and (max-width: 900px) {
-  * {
-    font-size: xx-large;
-  }
-}
-@media all and (max-width: 450px) {
+@media all and (max-width: 800px) {
   * {
     font-size: x-large;
   }
+  h2 {
+    font-size: 1.1rem;
+  }
 }
+
 a {
   color: black;
 }
@@ -105,11 +105,17 @@ nav ul li.navitems:hover:after {
 /*Main sections*/
 .maincontent {
   margin: 100px 20%;
+}
+.maincontent h2 {
   text-align: center;
+}
+@media all and (max-width: 1200px) {
+  .maincontent {
+    margin: 100px 10%;
+  }
 }
 
 .maincontent p {
-  font-size: xx-large;
   line-height: 1.3em;
 }
 
@@ -125,6 +131,7 @@ nav ul li.navitems:hover:after {
   background-color: var(--maincolor);
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
 }
 
 .secondaryafter {
@@ -135,14 +142,13 @@ nav ul li.navitems:hover:after {
 
 .secondaryItem1 {
   padding: 80px 50px;
-  align-self: center;
 }
 .secondaryItem2 {
   background-color: var(--secondarycolor);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+
   min-width: 200px;
   position: relative;
 }
@@ -175,6 +181,7 @@ nav ul li.navitems:hover:after {
     width: 100%;
   }
 }
+
 /*
 .triangle {
   width: 100%;
@@ -202,7 +209,7 @@ nav ul li.navitems:hover:after {
 }
 .footerpositive {
   height: 300px;
-  margin: 0;
+  padding: 0 10%;
 }
 .footerpositive p {
   font-size: 1.2em;
@@ -262,9 +269,7 @@ nav ul li.navitems:hover:after {
     position: absolute;
     height: 70%;
     width: 3px;
-
     left: 8%;
-
     content: "";
   }
   nav ul li.navitems:hover:after {
@@ -281,7 +286,7 @@ nav ul li.navitems:hover:after {
     position: relative;
   }
   /*Remove Home li from mobile navigation*/
-  .displaynone {
+  nav ul li:nth-child(2) {
     display: none;
   }
 

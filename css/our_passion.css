@@ -1,118 +1,129 @@
-/* Out Passion Site CSS*/
-.parralaxourpassion {
-  height: 2000px;
-  width: 100%;
-  background-image: url("/images/Greenbackgroundlong.jpg");
+/* Our Passion Site CSS */
 
+/* Parallax background effect */
+.parallax {
+  background-image: url("../images/Greenbackgroundlong.jpg");
+  /* Parallax effect */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
-  background-repeat: no-repeat;
   background-size: cover;
+  /* Extra padding on the top and the bottom to create space between the white background */
+  padding: 10vw 0;
 }
 
-.placeholder {
-  width: 100%;
-  height: 300px;
-}
-
+/* Memorialcard most outer container*/
 .memorialcard {
-  height: 500px;
-  width: 100%;
-  margin-bottom: 300px;
+  /* Padding top and bottom to create space between the memorialcards */
+  padding: 150px 0;
+  /* Flex so we are able to change the direction on every nth element */
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .memorialbody {
-  width: 60%;
-  height: inherit;
+  /* defining height, width and colour of the outer memorial div */
+  width: 70%;
+  min-height: 500px;
   background-color: white;
+  /* display elements in row */
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  /* Round corners */
   border-radius: 25px;
 }
-
-.memorialmain {
-  padding: 0 50px;
-  height: 100%;
-
-  display: flex;
-
-  align-items: center;
-}
-.memorialside {
-  background-color: var(--maincolor);
-  height: 100%;
-  min-width: 300px;
-  border-radius: 25px;
-  border: 0px solid var(--maincolor);
-}
-.memorialside div {
-  text-align: center;
-}
-
-.mimage {
-  background-color: var(--secondarycolor);
-  width: 100%;
-  height: 40%;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  margin-bottom: 20%;
-}
-
-.memorialside img {
-  height: 160px;
-  width: 160px;
-  border-radius: 50%;
-}
-
+/* Every second memorialcard is reversed */
 .memorialcard:nth-child(odd) {
   flex-direction: row-reverse;
 }
+/* manual class reverse */
 .mr {
   flex-direction: row-reverse;
 }
-
+/* Container housing main text of the memorial */
+.memorialmain {
+  /* Padding around text */
+  padding: 20px 100px;
+  /* Center text vertically */
+  display: flex;
+  align-items: center;
+}
+/* Container housing image and description of student */
+.memorialside {
+  /* var(--maincolor) refers to the global variable defined in main.css */
+  background-color: var(--maincolor);
+  /* Make sure it does not get squeezed too much and stays on at least npx */
+  min-width: 300px;
+  /* sideelement now also has rounded borders */
+  border-radius: 25px;
+}
+/* Container of the memorial sideimage */
+.mimage {
+  /* Change the background colour and round corners */
+  background-color: var(--secondarycolor);
+  border-radius: 25px;
+  min-height: 200px;
+  /* Align image in container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* memorial sideimage */
+.memorialside img {
+  /* Image size */
+  height: 160px;
+  width: 160px;
+  /* Round the image */
+  border-radius: 50%;
+}
+/* memorial sidedescription container*/
+.msdesc {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Align text horizontally */
+  text-align: center;
+}
+/* Media Queries */
 @media all and (max-width: 1600px) {
   p {
-    font-size: x-large;
+    font-size: 27px;
   }
-}
 
-@media all and (max-width: 1300px) {
-  .memorialcard {
-  }
   .memorialbody {
     width: 100%;
-    height: fit-content;
-    flex-direction: column-reverse;
   }
 
   .memorialside {
-    align-items: center;
     width: 100%;
-    min-height: 300px;
   }
-  .memorialmain {
-    background-color: white;
-    padding: 50px 100px;
-    border-radius: 25px;
-  }
+
   .mimage {
     margin-bottom: 0;
   }
-  .mcontent {
-  }
+}
 
+@media all and (max-width: 900px) {
   p {
-    font-size: x-large;
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  .memorialbody {
+    flex-direction: column-reverse;
+  }
+  .msdesc {
+    height: auto;
+    margin: 20px 0;
+  }
+  .memorialmain {
+    padding: 50px 50px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  p {
+    font-size: 20px;
   }
 }
