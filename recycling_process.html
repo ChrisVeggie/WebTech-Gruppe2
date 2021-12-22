@@ -11,12 +11,6 @@
     <!-- Titel des "Tabs" -->
     <title>Reycling Process</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {}
-
         /* Style the header */
         .header {
             border: solid 2px black;
@@ -27,44 +21,53 @@
         }
 
         /* Create three equal columns that floats next to each other */
-        .column {
-            display: table-cell;
-            border: solid 2px black;
-            padding: 10px;
-        }
-
         .row {
-            display: table;
+            display: grid;
+            /* 1fr is representing one fraction, as all fractions are all equal, the columns will take up equal space */
+            grid-template-columns: 1fr 1fr 1fr;
             width: 100%;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        .column {
+            border: solid 2px black;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .column:nth-child(even) {
+            background-color: lightgray;
+        }
+
+        .column:nth-child(odd) {
+            background-color: rgb(241, 231, 231);
+        }
+
+        .column span {
+            font-weight: bold;
+
         }
 
         /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        @media (max-width: 600px) {
-            .column {
-                width: 100%;
+        @media (max-width: 1300px) {
+            .row {
+                grid-template-columns: 1fr;
             }
         }
+
         .link {
             text-decoration: underline;
-            color:blue;
+            color: blue;
         }
-        .imgrow img {
-            min-width: 20%;
-            height: auto;
-        }
+
         .imgrow {
-            min-width:100%;
+            /* Always takes up 100% of its parent element in width */
+            min-width: 100%;
+            /* Center image vertically as well as horizontally*/
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .text {
-         
         }
     </style>
 </head>
@@ -76,7 +79,7 @@
             <li class="logo">
                 <a href="index.html">Recycle<span>4</span>Life</a>
             </li>
-            <li class="navitems displaynone">
+            <li class="navitems">
                 <a href="index.html">Home</a>
             </li>
             <li class="navitems">
@@ -92,19 +95,17 @@
     </nav>
 
     <!--Page Logo + Text-->
-
     <section class="pagelogo">
         <img class="pl1" src="images/renewable-energy.png" alt="" />
         <h1 class="pl2"><span>Recycling</span> Process</h1>
     </section>
 
-    <section class="maincontent">
-        <h2>Key steps of recycling</h2>
-        <br>
-        <p style="font-weight: bold">
-            <ins>Here you can learn how the recycling cycle generally takes place:</ins>
-        </p>
 
+    <section class="maincontent">
+        <h2>Key steps of recycling
+            <br><br>
+            <ins>Here you can learn how the recycling cycle generally takes place:</ins>
+        </h2>
     </section>
 
 
@@ -112,69 +113,74 @@
     <div class="header">
         <h2>RECYCLING PROCESS</h2>
     </div>
-  
 
     <div class="row">
-        <div class="column" style="background-color: rgb(241, 231, 231)">
-        <div class="text">
-            <span style="color: black; font-weight: bold; font-size: large">
-                STEP 1:</span>The first Step is the
-            <span style="font-weight: bold">COLLECTION:</span>
-            Collection methods vary from municipality to municipality. After
-            collection, recyclables must be sent to a materials recovery facility.
-            Using a recycling facility, they are sorted and processed into
-            marketable goods. They can then be sold to processing companies.
-        </div>
+        <div class="column">
+            <div>
+                <span>
+                    STEP 1:</span>The first Step is the
+                <span>COLLECTION:</span>
+                Collection methods vary from municipality to municipality. After
+                collection, recyclables must be sent to a materials recovery facility.
+                Using a recycling facility, they are sorted and processed into
+                marketable goods. They can then be sold to processing companies.
+            </div>
             <div class="imgrow">
-            <img src="images/idea thinking.png" alt=""/>
-        </div>
+                <img src="images/idea-thinking.png" alt="" />
+            </div>
         </div>
 
-        <div class="column" style="background-color: lightgray">
+        <div class="column">
             <div>
-            <span style="color: black; font-weight: bold; font-size: large">
-                STEP 2:</span>Here the recyclable materials are further
-            <span style="font-weight: bold"> PROCESSED.</span>
-            After cleaning and sorting, the recyclables are processed in order to
-            extract the raw materials that can then be used for the production of of
-            products with recycled content can be used.
-        </div>
-            <div class= "imgrow">
-            <img  src="images/sprout.png" alt=""/>
-        </div>
+                <span>
+                    STEP 2:</span>Here the recyclable materials are further
+                <span> PROCESSED.</span>
+                After cleaning and sorting, the recyclables are processed in order to
+                extract the raw materials that can then be used for the production of of
+                products with recycled content can be used.
+            </div>
+            <div class="imgrow">
+                <img src="images/sprout.png" alt="" />
+            </div>
         </div>
 
-        <div class="column" style="background-color: rgb(177, 168, 168)">
+        <div class="column">
             <div>
-            <span style="color: black; font-weight: bold; font-size: large">
-                STEP 3:</span>The third third step
-            <span style="font-weight: bold"> COMPLETES </span> the recycling loop.
-            This step involves the purchase of recycled products. It should be added
-            that more and more of today's products are made with fully or partially
-            recycled material.
-        </div>
+                <span>
+                    STEP 3:</span>The third third step
+                <span> COMPLETES </span> the recycling loop.
+                This step involves the purchase of recycled products. It should be added
+                that more and more of today's products are made with fully or partially
+                recycled material.
+            </div>
             <div class="imgrow">
-            <img src="images/save.png" alt=""/>
-        </div>
+                <img src="images/save.png" alt="" />
+            </div>
         </div>
     </div>
-    <div> 
+
+
+    <div>
         <p>For more information, click this link below: </p>
-        <a class="link" href="http://www.all-recycling-facts.com/recycling-process.html#ixzz7CCYSNfOE" target="_self">www.all-recycling-facts.com</a>
+        <a class="link" href="http://www.all-recycling-facts.com/recycling-process.html#ixzz7CCYSNfOE"
+            target="_self">www.all-recycling-facts.com</a>
     </div>
 
+
+    <!-- Bottom Navigation -->
     <div class="footer">
         <div class="footerwrapper">
             <div class="footerpositive">
-                <p>Its never too late to do something positive</p>
+                <p>Recycling can be done with passion</p>
             </div>
-            <a href="index.html">
+            <a href="why_you_should_care.html">
                 <div class="footerredirect">
                     <div class="footerredirect1">
-                        <img src="images/care.png" alt="" />
+                        <img src="images/people.png" alt="people from all over the world and from all colours united.
+                        click here to learn about why you should care about recycling" />
                     </div>
                     <div class="footerredirect2">
-                        <strong>Insert Text HERE This link leads to another page</strong>
+                        <strong>Why should you recycle? Click here to find out!</strong>
                     </div>
                 </div>
             </a>
