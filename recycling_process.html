@@ -8,67 +8,10 @@
 
     <!-- Stylesheet imports -->
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/recycling.css" />
     <!-- Titel des "Tabs" -->
     <title>Reycling Process</title>
     <style>
-        /* Style the header */
-        .header {
-            border: solid 2px black;
-            background-color: #b3e59f;
-            padding: 40px;
-            text-align: center;
-            font-size: 20px;
-        }
-
-        /* Create three equal columns that floats next to each other */
-        .row {
-            display: grid;
-            /* 1fr is representing one fraction, as all fractions are all equal, the columns will take up equal space */
-            grid-template-columns: 1fr 1fr 1fr;
-            width: 100%;
-        }
-
-        .column {
-            border: solid 2px black;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .column:nth-child(even) {
-            background-color: lightgray;
-        }
-
-        .column:nth-child(odd) {
-            background-color: rgb(241, 231, 231);
-        }
-
-        .column span {
-            font-weight: bold;
-
-        }
-
-        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        @media (max-width: 1300px) {
-            .row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .link {
-            text-decoration: underline;
-            color: blue;
-        }
-
-        .imgrow {
-            /* Always takes up 100% of its parent element in width */
-            min-width: 100%;
-            /* Center image vertically as well as horizontally*/
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
     </style>
 </head>
 
@@ -117,9 +60,7 @@
     <div class="row">
         <div class="column">
             <div>
-                <span>
-                    STEP 1:</span>The first Step is the
-                <span>COLLECTION:</span>
+                <span>STEP 1:</span>The first Step is the<span>COLLECTION:</span>
                 Collection methods vary from municipality to municipality. After
                 collection, recyclables must be sent to a materials recovery facility.
                 Using a recycling facility, they are sorted and processed into
@@ -132,9 +73,7 @@
 
         <div class="column">
             <div>
-                <span>
-                    STEP 2:</span>Here the recyclable materials are further
-                <span> PROCESSED.</span>
+                <span>STEP 2:</span>Here the recyclable materials are further<span> PROCESSED.</span>
                 After cleaning and sorting, the recyclables are processed in order to
                 extract the raw materials that can then be used for the production of of
                 products with recycled content can be used.
@@ -146,9 +85,7 @@
 
         <div class="column">
             <div>
-                <span>
-                    STEP 3:</span>The third third step
-                <span> COMPLETES </span> the recycling loop.
+                <span>STEP 3:</span>The third third step<span> COMPLETES </span> the recycling loop.
                 This step involves the purchase of recycled products. It should be added
                 that more and more of today's products are made with fully or partially
                 recycled material.
