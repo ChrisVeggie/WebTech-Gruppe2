@@ -1,5 +1,6 @@
+/* Styling for the why you should care page */
 .reasons {
-  margin: 200px 0;
+  margin: 150px 0;
 }
 /* Reasons Wrapper */
 .reasonswrapper {
@@ -8,17 +9,19 @@
   grid-gap: 15px;
   margin: 100px 10px;
 }
+/* header of the reason grid */
 .reasontitle {
   width: 100%;
   text-align: center;
 }
-
+/* Styling for each individual reason */
 .reason {
   display: flex;
   flex-direction: column;
-  background-color: var(--mainlighter);
+  background-color: var(--maincolourlight);
   border-radius: 25px;
 }
+/* Container for the image in the reasons section */
 .rimg {
   display: flex;
   justify-content: center;
@@ -28,40 +31,29 @@
   height: 100px;
   background-color: var(--secondarycolor);
 }
+/* Styling for the image itself */
 .rimg img {
   height: 80px;
 }
+/* Styling for the textcontainer */
 .rtext {
+  /* align center */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   min-height: 150px;
   width: 100%;
+  /* Round borders */
   border-radius: 25px;
-  background-color: var(--mainlighter);
+  background-color: var(--maincolourlight);
 }
-
-.secondaryItem1 img {
-  height: 60vh;
-}
-
-.sciencepapers {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 100px 0;
-}
-.sciencepapers a {
-  color: blue;
-  text-decoration: underline;
-}
-.sciencepapers iframe {
-  width: 60%;
-  height: 100vh;
+/* Reduce the size of the secondaryItem2 as no image will be inside */
+@media all and (max-width: 900px) {
+  .secondaryItem2 {
+    height: 80px;
+    min-height: 80px;
+  }
 }
 
 .displayimg {
@@ -82,6 +74,25 @@
   padding: 20px 0;
 }
 
+/* Pdf section */
+.sciencepapers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 0;
+}
+/* Link styling */
+.sciencepapers a {
+  color: blue;
+  text-decoration: underline;
+}
+/* Pdf iframe */
+.sciencepapers iframe {
+  width: 60%;
+  height: 100vh;
+}
 @media all and (max-width: 1400px) {
   .reasonswrapper {
     grid-template-columns: 1fr 1fr;

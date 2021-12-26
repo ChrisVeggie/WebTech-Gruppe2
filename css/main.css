@@ -4,9 +4,9 @@
 :root {
   --maincolor: #b3e59f;
   --secondarycolor: #98ce83;
-  --mainlighter: #bae2aa;
+  --maincolourlight: #bae2aa;
 }
-/*General Document wide changes*/
+/*General document wide changes*/
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +15,9 @@
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
   font-size: xx-large;
+  color: black;
 }
-
+/* General font size */
 @media all and (max-width: 800px) {
   * {
     font-size: x-large;
@@ -25,10 +26,15 @@
     font-size: 1.1rem;
   }
 }
-
-a {
-  color: black;
+@media all and (max-width: 500px) {
+  * {
+    font-size: x-large;
+  }
+  h2 {
+    font-size: large;
+  }
 }
+
 body {
   background-color: white;
   width: 100%;
@@ -37,7 +43,6 @@ body {
 /*Navbar*/
 nav {
   padding: 10px 30px;
-  background-color: white;
 }
 nav ul {
   display: flex;
@@ -70,7 +75,7 @@ nav li.navitems:after {
   background-color: var(--maincolor);
   height: 2px;
   width: 100%;
-  left: 0;
+  left: 0px;
   bottom: 0px;
   content: "";
 }
@@ -82,7 +87,6 @@ nav ul li.navitems:hover:after {
 }
 
 /*Logo and Title for every Page*/
-
 .pagelogo {
   height: 150px;
   margin-top: 50px;
@@ -95,8 +99,6 @@ nav ul li.navitems:hover:after {
 .pl1 {
   height: 100px;
   margin-right: 15px;
-}
-.pl2 {
 }
 .pl2 span {
   color: var(--maincolor);
@@ -113,13 +115,16 @@ nav ul li.navitems:hover:after {
   .maincontent {
     margin: 100px 10%;
   }
+  .maincontent h2 {
+    text-align: start;
+  }
 }
 
 .maincontent p {
   line-height: 1.3em;
 }
 
-/*Secondary Variant*/
+/*Secondary Sections*/
 .secondary {
   display: flex;
   flex-direction: column;
@@ -182,15 +187,6 @@ nav ul li.navitems:hover:after {
   }
 }
 
-/*
-.triangle {
-  width: 100%;
-  height: 0;
-  border-width: 96px 266px 0 0;
-  border-color: #98ce83 transparent transparent transparent;
-  border-style: solid;
-} */
-
 /*Footer Navigation*/
 .footer {
   width: 100%;
@@ -212,12 +208,11 @@ nav ul li.navitems:hover:after {
   padding: 0 10%;
 }
 .footerpositive p {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .footerredirect {
   height: 350px;
-
   position: relative;
   margin: 0;
 }
@@ -245,18 +240,15 @@ nav ul li.navitems:hover:after {
   height: 100%;
   width: 100%;
 }
+/* Small animation on hover */
 .footerredirect2:hover {
   transition: all 0.2s linear;
   color: white;
 }
 
-.t360:hover {
-  transition: all 0.5s linear;
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
+.footerredirect img:hover {
+  transition: all 0.1s linear;
+  transform: scale(1.1);
 }
 
 /*Media Queries. Responsive Webdesign*/
