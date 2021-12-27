@@ -93,6 +93,7 @@
   width: 60%;
   height: 100vh;
 }
+
 @media all and (max-width: 1400px) {
   .reasonswrapper {
     grid-template-columns: 1fr 1fr;

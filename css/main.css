@@ -115,9 +115,6 @@ nav ul li.navitems:hover:after {
   .maincontent {
     margin: 100px 10%;
   }
-  .maincontent h2 {
-    text-align: start;
-  }
 }
 
 .maincontent p {
