@@ -19,13 +19,16 @@
   display: flex;
   flex-direction: column;
   background-color: var(--maincolourlight);
+  /* Rounded Corners */
   border-radius: 25px;
 }
 /* Container for the image in the reasons section */
 .rimg {
+  /* Center Image*/
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Round Corners */
   border-radius: 25px;
   width: 100%;
   height: 100px;
