@@ -15,7 +15,6 @@
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
   font-size: xx-large;
-  color: black;
 }
 /* General font size */
 @media all and (max-width: 800px) {
@@ -236,6 +235,7 @@ nav ul li.navitems:hover:after {
   background-color: var(--maincolor);
   height: 100%;
   width: 100%;
+  color: black;
 }
 /* Small animation on hover */
 .footerredirect2:hover {
